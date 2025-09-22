@@ -14,6 +14,11 @@ namespace Ovning_OOP_Github_BankAccount
         {
             Deposit(GetBalance() * InterestRate);
         }
+        public override void ShowAccountType()
+        {
+            Console.WriteLine("Savings Account");
+        }
+
     }
 
 }

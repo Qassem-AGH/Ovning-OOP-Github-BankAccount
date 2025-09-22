@@ -27,6 +27,11 @@ namespace Ovning_OOP_Github_BankAccount
             return balance;
         }
 
+        public virtual void ShowAccountType()
+        {
+            Console.WriteLine("Standard Bank Account");
+        }
+
     }
 
 }
