@@ -9,13 +9,24 @@ namespace Ovning_OOP_Github_BankAccount
     // BankAccount.cs
     public class BankAccount
     {
-        public string AccountHolder;
-        public double Balance;
+        private double balance;
+        public string AccountHolder { get; set; }
 
-        public void ShowBalance()
+        public void Deposit(double amount)
         {
-            Console.WriteLine($"Balance: {Balance} Kr");
+            if (amount > 0) balance += amount;
         }
+
+        public void Withdraw(double amount)
+        {
+            if (amount > 0 && amount <= balance) balance -= amount;
+        }
+
+        public double GetBalance()
+        {
+            return balance;
+        }
+
     }
 
 }
